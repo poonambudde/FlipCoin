@@ -6,19 +6,33 @@ namespace FlipCoin
     {
         static void Main(string[] args)
         {
-            const int HEAD = 1;
-            const int TAIL = 0;
+            // Declarations
+            int headCount = 0;
+            int tailCount = 0;
 
-            Random random = new Random();
-            int flipCheck = random.Next(0, 2);
-            if (flipCheck == HEAD)
+            // Main Program Logic
+            Console.WriteLine("Press enter to begin");
+            Console.ReadLine();
+            for (int i = 1; i <= 15; i++)
             {
-                Console.WriteLine("HEAD wins");
+                Random rnd = new Random();
+                int flipCheck = rnd.Next(0, 2);
+                if (flipCheck == 1)
+                {
+                    Console.WriteLine("Heads");
+                    headCount++;
+                }
+                else
+                {
+                    Console.WriteLine("Tails");
+                    tailCount++;
+                }
             }
-            else
-            {
-                Console.WriteLine("TAIL wins");
-            }
+            Console.WriteLine("Heads wins {0} times", headCount);
+            Console.WriteLine("Tails wins {0} times", tailCount);
+
+            Console.ReadLine();
+
         }
     }
 }
