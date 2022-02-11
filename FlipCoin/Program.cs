@@ -18,9 +18,7 @@ namespace FlipCoin
             else
             {
                 Console.WriteLine("TAIL wins");
-
             }
-
         }
     }
 }
