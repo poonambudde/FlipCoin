@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace FlipCoin
 {
     class Program
@@ -18,13 +17,13 @@ namespace FlipCoin
             //constant
             const int HEAD = 0;
             const int TAIL = 1;
-            
+
             //declaration
             int headCount = 0;
             int tailCount = 0;
 
 
-            while (headCount < 21 && tailCount < 21)
+            while (headCount < 21 && tailCount < 21 && (headCount-tailCount) < 2)
             {
 
                 Random random = new Random();
@@ -52,11 +51,7 @@ namespace FlipCoin
             {
                 Console.WriteLine($"tail won by {tailCount - headCount}");
 
-            }
-            else if (headCount == tailCount)
-            {
-                Console.WriteLine("tie");
-
+          
             }
 
 
